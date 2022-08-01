@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  border: none;
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+section {
+  padding: 20px 24px;
+}
+
+/* colors */
+/* green #629460 */
+
+/* #1E1E24 */
+
+/* Navbar Start */
+
+header {
+  /* background-color: #1B1F3B; */
+  /* background-color: #164c96; */
+  background-color: #1e1e24;
+  color: white;
+}
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  margin-right: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.login {
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.signup-btn {
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 22px;
+  cursor: pointer;
+  color: white;
+  font: inherit;
+  padding: 8px 36px;
+
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-banding {
+  font-size: 30px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+}
+
+/* Navbar End */
+
+/* class info start */
+
+section.classInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.class-info-about {
+  display: flex;
+  gap: 30px;
+}
+/* class info end */
+
+/* students section start */
+section.students {
+  margin-top: 30px;
+margin: 0 40px;
+}
+
+.student__heading {
+  display: flex;
+  gap: 150px;
+  margin-left: 40px;
+}
+
+.student__list {
+  margin-top: 30px;
+}
+
+.studentlist {
+  display: flex;
+  gap: 180px;
+margin-top: 20px;
+  padding: 20px 40px;
+  background: #d9d9d9;
+  color: black;
+  border-radius: 50px;
+  cursor: pointer;
+
+  /* width: 80%; */
+}
+
+.studentlist.present{
+  background: #629460;
+  color: white;
+}
+
+
+/* students section end */
