@@ -2,22 +2,27 @@ import { useState, useEffect } from "react";
 
 const Students = () => {
   const [studentData, setStudentData] = useState([]);
-  const [isPresent, setIsPresent] = useState(false);
 
-  const getData = async () => {
+  const getStudentList = async () => {
     const stdData = await fetch("studentapi.json");
     const data = await stdData.json();
     setStudentData(data);
   };
 
   useEffect(() => {
-    getData();
+    getStudentList();
   }, []);
 
+  const studentPresentHandler = (rollno) => {
+    console.log(rollno)
+    const studentList = studentData.map((student) =>
+      student.rollno === rollno
+        ? { ...student, isPresent: !student.isPresent }
+        : student
+    );
 
-  const presentHandler = ()=>{
-    setIsPresent(prev => !prev)
-  }
+    setStudentData(studentList);
+  };
 
   return (
     <section className="students">
@@ -27,15 +32,17 @@ const Students = () => {
       </div>
 
       <div className="students__list">
-        {studentData.map(({ name, rollno }, index) => {
+        {studentData.map((student) => {
           return (
             <div
-              key={index}
-              className={isPresent ? "studentlist present" : "studentlist"}
-              onClick={presentHandler}
+              key={student.rollno}
+              className={
+                student.isPresent ? "studentlist present" : "studentlist"
+              }
+              onClick={() => studentPresentHandler(student.rollno)}
             >
-              <p>{rollno}</p>
-              <p>{name}</p>
+              <p>{student.rollno}</p>
+              <p>{student.name}</p>
             </div>
           );
         })}

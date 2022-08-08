@@ -1,14 +1,17 @@
 [
     {
       "name": "A",
-      "rollno": 1
+      "rollno": 1,
+      "isPresent": false
     },
     {
       "name": "B",
-      "rollno": 2
+      "rollno": 2,
+      "isPresent": false
     },
     {
       "name": "C",
-      "rollno": 4
+      "rollno": 4,
+      "isPresent": false
     }
   ]
